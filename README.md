@@ -1,4 +1,4 @@
-<h3 align="center">Aplikasi Persewaan Mobil</h5>
+<h3 align="center">Aplikasi Persewaan Mobil</h3>
 
 ## Install
 
