@@ -91,33 +91,25 @@
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                                 Total Amount
                             </th>
-                            {{-- <th
-                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                Actions
-                            </th> --}}
                         </tr>
                     </thead>
                     <tbody class="dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        @foreach ($carReturns as $rental)
+                        @foreach ($carReturns as $return)
                             <tr>
                                 <td
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-200">
-                                    {{ $rental->car->brand }} -
-                                    {{ $rental->car->model }}
+                                    {{ $return->rental->car->brand }} -
+                                    {{ $return->rental->car->model }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
-                                    {{ $rental->car->license_plate }}
+                                    {{ $return->rental->car->license_plate }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
-                                    {{ $rental->start_date }}
+                                    {{ $return->return_date }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
-                                    {{ $rental->end_date }}
+                                    {{ $return->total_amount }}
                                 </td>
-                                {{-- <td class="px-6 py-4 whitespace-nowrap">
-                                    <a href="{{ route('rentals.show', $rental->id) }}"
-                                        class="btn btn-outline btn-info"><i class="fa-solid fa-circle-info"></i></a>
-                                </td> --}}
                             </tr>
                         @endforeach
                     </tbody>
